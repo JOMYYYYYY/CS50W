@@ -1,0 +1,30 @@
+body {
+    margin: 0;
+      height: 50vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgb(227, 226, 191);
+
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+
+}
+
+.top-right-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
