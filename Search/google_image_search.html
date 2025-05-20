@@ -1,12 +1,39 @@
+<!-- On the Google Image Search page, the user should be able to type in a query, 
+click a search button, and be taken to the Google Image search results for that page. -->
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Google Image Search</title>
+        <title>Search</title>
+        <style>
+            .top-left-link {
+                display: flex;
+                position: absolute;
+                left: 0%;
+                top: 0%;
+                padding: 20px;
+            }
+            
+              body {
+                display: flex;
+                justify-content: center;  /* Center horizontally */
+                align-items: center;      /* Center vertically */
+                height: 100vh;
+                margin: 0;
+            }
+        </style>
     </head>
     <body>
-        <form action="https://google.com/search">
-            <input type="text" name="q">
-            <input type="submit" value="Google Search">
+        <form action="https://www.google.com/search" method="GET">
+            <input type="text" name="q" placeholder="Search for images">
+            <input type="hidden" name="tbm" value="isch"> <!-- 'isch' = image search -->
+            <input type="submit" value="Google Image Search">
         </form>
+
+        <div class="top-left-link">
+            <a href="index.html">
+                <button>go back to Google Search</button>
+            </a>
+        </div>
     </body>
 </html>
