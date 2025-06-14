@@ -1,30 +1,89 @@
-body {
+/* Reset some defaults */
+body, html {
     margin: 0;
-      height: 50vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      background-color: rgb(227, 226, 191);
-
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
 }
 
+/* Centering the main content */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Search form styling */
 form {
     display: flex;
-    align-items: center;
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 20px; /* Rounded corners */
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
-
+    align-items: center;
+    margin-top: 100px;
 }
 
+input[type="text"] {
+    width: 500px;
+    height: 40px;
+    padding: 0 15px;
+    border: 1px solid #dcdcdc;
+    border-radius: 24px;
+    outline: none;
+    font-size: 16px;
+    transition: box-shadow 0.2s;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 0 5px rgba(66, 133, 244, 0.6);
+    border-color: #4285f4;
+}
+
+/* Search buttons */
+input[type="submit"] {
+    margin: 20px 6px 0 6px;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: border 0.2s, box-shadow 0.2s;
+}
+
+input[type="submit"]:hover {
+    border: 1px solid #dadce0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Top-right navigation links */
 .top-right-link {
     position: absolute;
-    top: 20px;
+    top: 15px;
     right: 20px;
+}
+
+.top-right-link a {
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+.top-right-link button {
+    padding: 8px 12px;
+    background-color: transparent;
+    border: 1px solid #dadce0;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.top-right-link button:hover {
+    background-color: #f1f3f4;
+}
+
+.button-row {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    gap: 10px; /* spacing between the buttons */
+    margin-top: 20px;
 }
