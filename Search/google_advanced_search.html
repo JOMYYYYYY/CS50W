@@ -23,22 +23,84 @@ the user should be able to provide input for the following four fields (taken fr
                 padding: 20px;
             }
             
-              body {
-                display: flex;
-                justify-content: center;  /* Center horizontally */
-                align-items: center;      /* Center vertically */
-                height: 100vh;
-                margin: 0;
+            body {
+            display: flex;
+            justify-content: center;  /* Center horizontally */
+            align-items: center;      /* Center vertically */
+            height: 100vh;
+            margin: 0;
+                
+            }
+
+            /* Container to center the form and provide padding */
+            .advanced-search-container {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            }
+
+            /* Each label is displayed as a block element (vertical stacking) and left aligned */
+            .advanced-search-container label {
+            display: block;
+            margin: 15px 0 5px;
+            text-align: left;
+            font-weight: bold;
+            }
+
+            /* Text inputs take full width with padding for a better user experience */
+            .advanced-search-container input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+            }
+
+            /* Styling the Advanced Search button similar to Google's design */
+            .advanced-search-container input[type="submit"] {
+            background-color: #1a73e8; /* Google blue */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 3px;
+            margin-top: 20px;
+            }
+
+            .advanced-search-container input[type="submit"]:hover {
+            background-color: #1765c1;
             }
         </style>
     </head>
     <body>
-        <form action="https://www.google.com/search" method="GET">
-            <input type="text" name="q" placeholder="Advanced Search Input">
-            <input type="submit" value="Google Advanced Search">
-        </form>
 
-        <div></div>
+        <div class="advanced-search-container">
+             <form action="https://www.google.com/search" method="GET">
+                <!-- for all these words -->
+                <label for="all-words">Find pages with… “all these words:”</label>
+                <input type="text" id="all-words" name="as_q" placeholder="">
+
+                <!-- for this exact word or phrase -->
+                <label for="exact_phrase">Find pages with... "this exact word or phrase:"</label>
+                <input type="text" id="exact_phrase" name="as_epq" placeholder="">
+                
+                <!-- Field for "any of these words" -->
+                <label for="any-words">Find pages with… “any of these words:”</label>
+                <input type="text" id="any-words" name="any" placeholder="">
+                
+                <!-- Field for "none of these words" -->
+                <label for="none-words">Find pages with… “none of these words:”</label>
+                <input type="text" id="none-words" name="none" placeholder="">
+
+                <input type="submit" value="Advanced Search">
+            </form>
+        </div>
 
         <div class="top-left-link">
             <a href="index.html">
